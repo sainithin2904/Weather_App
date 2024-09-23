@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="../styles/weather.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="column-6 offset-3">
+                <input id="search_input" class="form-control" placeholder="enter the city name">
+                <button id="search_btn" class="button">Search</button>
+            </div>
+        </div>
+        <div id="result_container" >
+        </div>
+        <div id="search_result_container">
+            <h2 class="text">City :<span id="City"></span></h2> 
+            <h2 class="text">Region :<span id="Region"></span></h2>
+            <h2 class="text">Country :<span id="Country"></span></h2>
+            <h2 class="text">Temparature :<span id="Temp"></span><span id="unit" ></span></h2>
+            <h2 class="text">Humidity :<span id="Humidity"></span></h2>
+            <h2 class="text">Wind Speed :<span id="windspeed"></span><span> Kmph</span></h2> 
+        </div>
+        <button id="convert_btn" class="button">Click here to toggle the Temparature Unit</button>
+    </div>
+    <script src="../scripts/weather.js"></script>
+</body>
+</html>
