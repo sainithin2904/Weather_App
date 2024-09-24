@@ -7,7 +7,7 @@ Setup
 1.Create a WeatherAPI account: Sign up for a free account on WeatherAPI.com to obtain a weather API key. use https://www.weatherapi.com/ 
 2.Clone the Project and keep the File structure same. 
 3.Replace the API key In the config.json,
-4.Run the weather.html file in Templates folder
+4.Run the weather.html file in Templates folder which is in src Folder
 
 Working
 1.The app will automatically detect your current location and display the weather conditions.
