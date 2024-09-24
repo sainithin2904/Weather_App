@@ -1,5 +1,12 @@
-const apikey = fetch('./src/config.json')
-console.log(apikey)
+var key
+async function init() {
+    const response = await fetch('../config.json');
+    const data = await response.json();
+    key = data.apikey;
+    // console.log(key);
+  }
+  
+init();
 const city = document.getElementById('City');
 const region = document.getElementById('Region');
 const country = document.getElementById('Country');
@@ -34,14 +41,14 @@ function reqCurrent_location() {
 
 async function get_data_by_location(location) {
     const { latitude, longitude } = location;
-    const url = `http://api.weatherapi.com/v1/current.json?key=723eff5877fd4760a21130144241805&q=${latitude},${longitude}&aqi=no`;
+    const url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${latitude},${longitude}&aqi=no`;
     const response = await fetch(url);
     const data = await response.json();
     return data;
 }
 
 async function custom_search(value) {
-    const url = `http://api.weatherapi.com/v1/current.json?key=723eff5877fd4760a21130144241805&q=${value}&aqi=no`;
+    const url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${value}&aqi=no`;
     const response = await fetch(url);
     const data = await response.json();
     return data;
