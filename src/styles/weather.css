@@ -44,9 +44,9 @@ input.form-control {
   outline: none;
 }
 
-input.form-control:focus {
+/* input.form-control:focus {
   border-color: #007bff;
-}
+} */
 
 button.button {
   padding: 10px 20px;

@@ -1,4 +1,5 @@
-import connfig from './connfig.json'
+const apikey = fetch('./src/config.json')
+console.log(apikey)
 const city = document.getElementById('City');
 const region = document.getElementById('Region');
 const country = document.getElementById('Country');
@@ -11,10 +12,10 @@ const custom_input = document.getElementById('search_input');
 const search_btn = document.getElementById('search_btn');
 const convert_btn = document.getElementById('convert_btn');
 
+
 let isCelsius = true; // to track current temperature unit
 let currentTempC;
 let currentTempF; 
-
 function reqCurrent_location() {
     return new Promise((resolve, reject) => {
         window.navigator.geolocation.getCurrentPosition(
@@ -33,14 +34,14 @@ function reqCurrent_location() {
 
 async function get_data_by_location(location) {
     const { latitude, longitude } = location;
-    const url = `http://api.weatherapi.com/v1/current.json?key=${connfig.weatherApiKey}&q=${latitude},${longitude}&aqi=no`;
+    const url = `http://api.weatherapi.com/v1/current.json?key=723eff5877fd4760a21130144241805&q=${latitude},${longitude}&aqi=no`;
     const response = await fetch(url);
     const data = await response.json();
     return data;
 }
 
 async function custom_search(value) {
-    const url = `http://api.weatherapi.com/v1/current.json?key=${connfig.weatherApiKey}&q=${value}&aqi=no`;
+    const url = `http://api.weatherapi.com/v1/current.json?key=723eff5877fd4760a21130144241805&q=${value}&aqi=no`;
     const response = await fetch(url);
     const data = await response.json();
     return data;
