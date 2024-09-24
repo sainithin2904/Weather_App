@@ -6,7 +6,7 @@ One first window load it detects the users current location and render the data 
 Setup
 1.Create a WeatherAPI account: Sign up for a free account on WeatherAPI.com to obtain a weather API key. use https://www.weatherapi.com/ 
 2.Clone the Project and keep the File structure same. 
-3.Replace the API key In the config.json,
+3.Replace the API key In the config.json, (My API Key is given for Testing please replace your own API Key  )
 4.Run the weather.html file in Templates folder which is in src Folder
 
 Working
